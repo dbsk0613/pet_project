@@ -1,0 +1,8 @@
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"/><title>홈</title></head>
+<body>
+  <h1>Spring MVC + Java 11 프로젝트 시작! 햄햄</h1>
+</body>
+</html>

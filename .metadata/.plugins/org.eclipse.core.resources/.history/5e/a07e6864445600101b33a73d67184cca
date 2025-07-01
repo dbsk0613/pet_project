@@ -1,0 +1,3 @@
+jdbc.url=jdbc:mysql://localhost:3306/ecommerce?useSSL=false&serverTimezone=Asia/Seoul
+jdbc.username=root
+jdbc.password=\uBE44\uBC00\uBC88\uD638
