@@ -5,8 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/products")
 public class ProductController {
 
     // 1) 더미 데이터 (실제론 서비스/mapper에서 가져오시면 됩니다)
