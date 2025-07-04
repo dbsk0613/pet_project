@@ -1,32 +1,106 @@
 .mypage-container {
-  max-width: 500px;
+  max-width: 450px;
   margin: 2rem auto;
-  padding: 1rem;
-  border: 1px solid #ccc;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+.mypage-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .mypage-form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;  /* 입력란 간격을 줄입니다 */
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.left-fields {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+  flex: 1;
+  min-width: 250px;
 }
 
-.mypage-form label {
-  font-weight: bold;
-  margin-bottom: 0.2rem;
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
 
-.mypage-form input {
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.mypage-form input[type="text"],
+.mypage-form input[type="password"],
+.mypage-form input[type="email"],
+.mypage-form input[type="tel"] {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 0.95rem;
 }
 
 .mypage-form button {
-  background: #f9c784;
+  padding: 0.75rem;
+  background-color: #f8a825;
+  color: #fff;
   border: none;
-  padding: 0.7rem;
+  border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mypage-form button:hover {
+  background-color: #e3901b;
+}
+
+/* 프로필 사진 영역 */
+.profile-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 140px;
+}
+
+.profile-upload label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+/* 프로필 사진 미리보기 */
+.profile-preview,
+.profile-placeholder {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+/* 파일 선택 input 영역을 작게 */
+.profile-upload input[type="file"] {
+  width: 120px;
+}
+
+/* 아이디/비밀번호 input은 짧게 */
+.form-group.short input {
+  max-width: 220px;
 }

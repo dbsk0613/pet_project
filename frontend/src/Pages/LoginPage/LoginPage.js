@@ -9,29 +9,26 @@ function LoginPage() {
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:8080/ecommerce-backend/api/users/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          userId: userId,
-          password: password
-        })
-      });
 
-      if (response.ok) {
-        const user = await response.json();
-        login(user.userId); // Context에 로그인 처리
-        navigate("/");
-      } else {
-        alert("아이디 또는 비밀번호가 올바르지 않습니다.");
-      }
-    } catch (error) {
-      console.error("로그인 오류:", error);
-      alert("서버와의 연결에 실패했습니다.");
-    }
+    fetch("http://localhost:8080/ecommerce-backend/api/users")
+      .then((res) => res.json())
+      .then((users) => {
+        const user = users.find(
+          (u) => u.userId === userId && u.password === password
+        );
+        if (user) {
+          login(user.userId, user.email);
+          navigate("/");
+        } else {
+          alert("아이디 또는 비밀번호가 올바르지 않습니다.");
+        }
+      })
+      .catch((err) => {
+        console.error("로그인 오류", err);
+        alert("로그인 중 오류가 발생했습니다.");
+      });
   };
 
   return (

@@ -6,16 +6,14 @@ import LoginPage from "./Pages/LoginPage/LoginPage";
 import SignupPage from "./Pages/SignupPage/SignupPage";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Header from "./Components/Header/Header";
-import { AuthProvider } from "./Components/Contexts/AuthContext";
-
-// ✅ UserList 컴포넌트 임포트
+import MyPage from "./Pages/MyPage/MyPage";
 import UserList from "./Components/UserList/UserList";
+import { AuthProvider } from "./Components/Contexts/AuthContext";
 
 function App() {
   return (
     <AuthProvider>
       <Header />
-
       <main style={{ padding: "1rem" }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,11 +24,10 @@ function App() {
             path="/mypage"
             element={
               <PrivateRoute>
-                <div>마이페이지 (로그인한 사용자만 볼 수 있어요)</div>
+                <MyPage />
               </PrivateRoute>
             }
           />
-          {/* ✅ 유저 목록 화면 라우트 */}
           <Route path="/users" element={<UserList />} />
         </Routes>
       </main>

@@ -7,7 +7,6 @@ export const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  // 앱이 시작될 때 localStorage에서 사용자 정보 로드
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -15,14 +14,12 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  // 로그인 함수
-  const login = (email) => {
-    const userData = { email };
+  const login = (userId, email) => {
+    const userData = { userId, email };
     setUser(userData);
     localStorage.setItem("user", JSON.stringify(userData));
   };
 
-  // 로그아웃 함수
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user");
@@ -34,3 +31,4 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+
