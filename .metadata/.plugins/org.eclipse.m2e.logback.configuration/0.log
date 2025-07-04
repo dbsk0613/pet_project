@@ -1126,6 +1126,7 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.mybatis.s
 2025-07-04 23:52:39,330 [Worker-225: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2025-07-04 23:52:39,331 [Worker-225: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2025-07-04 23:52:39,331 [Worker-225: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+<<<<<<< HEAD
 2025-07-05 00:14:55,852 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2025-07-05 00:19:18,023 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2025-07-05 00:19:37,534 [Worker-6: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.lyn:ecommerce-backend:0.0.1-SNAPSHOT @ C:\LYN_project\ecommerce-backend\pom.xml.
@@ -1196,3 +1197,6 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.mybatis.s
 2025-07-05 00:35:17,424 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2025-07-05 00:35:17,431 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2025-07-05 00:35:17,433 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\LYN_project\backend\src\test\resources
+=======
+2025-07-04 23:52:39,332 [Worker-225: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\LYN_project\ecommerce-backend\src\test\resources
+>>>>>>> 2fd4731ea260bc4a9f66aa2f38d32dc867338b56

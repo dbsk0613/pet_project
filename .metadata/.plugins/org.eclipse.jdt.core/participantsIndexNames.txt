@@ -1,5 +1,7 @@
 INDEX VERSION 1.131
 C:\LYN_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1480549563.index
 \ecommerce-backend\src\main\java
+C:\LYN_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1102915525.index
+\backend\src\main\java
 C:\LYN_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\889764271.index
 \ecommerce-backend\src\main\java
