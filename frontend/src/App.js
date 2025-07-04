@@ -1,24 +1,40 @@
-// src/App.js
-import { Routes, Route, Link } from 'react-router-dom';
-import ProductList   from './ProductList';
-import ProductDetail from './ProductDetail';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import CategoryPage from "./Pages/CategoryPage/CategoryPage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
+import SignupPage from "./Pages/SignupPage/SignupPage";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Header from "./Components/Header/Header";
+import { AuthProvider } from "./Components/Contexts/AuthContext";
+
+// ✅ UserList 컴포넌트 임포트
+import UserList from "./Components/UserList/UserList";
 
 function App() {
   return (
-    <>
-      <header style={{ padding: '1rem', background: '#333', color: '#fff' }}>
-        <h1>NURI</h1>
-      </header>
-      <nav style={{ padding: '0.5rem' }}>
-        <Link to="/">상품 목록</Link>
-      </nav>
-      <main style={{ padding: '1rem' }}>
+    <AuthProvider>
+      <Header />
+
+      <main style={{ padding: "1rem" }}>
         <Routes>
-          <Route path="/"             element={<ProductList />}   />
-          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route
+            path="/mypage"
+            element={
+              <PrivateRoute>
+                <div>마이페이지 (로그인한 사용자만 볼 수 있어요)</div>
+              </PrivateRoute>
+            }
+          />
+          {/* ✅ 유저 목록 화면 라우트 */}
+          <Route path="/users" element={<UserList />} />
         </Routes>
       </main>
-    </>
+    </AuthProvider>
   );
 }
 

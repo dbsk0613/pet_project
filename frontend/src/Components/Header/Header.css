@@ -1,0 +1,95 @@
+/* src/Components/Header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9c784;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #f4978e;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #f4978e;
+}
+/* Header.css */
+
+.header-container {
+  background: #f9c784;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.account-link {
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.account-link-active {
+  background-color: #f4978e;
+}
+
+.category-link {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.category-link-active {
+  background-color: #f4978e;
+  color: white;
+}
+
+.category-menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
